@@ -21,4 +21,24 @@ return [
     'displayMode'           => 'fullpage',
     'watermarkTextAlpha'    => 0.1,
 
+    'protection'            => [
+        /*
+        | SetProtection – Encrypts and sets the PDF document permissions
+        |
+        | https://mpdf.github.io/reference/mpdf-functions/setprotection.html
+        */
+        'permissions' => [
+            'copy' => false,
+            'print' => true,
+            'modify' => false,
+            'annot-forms' => false,
+            'fill-forms' => false,
+            'extract' => false,
+            'assemble' => false,
+            'print-highres' => false,
+        ],
+        'user_password' => null,
+        'owner_password' => null,
+        'length' => 40,
+    ],
 ];
